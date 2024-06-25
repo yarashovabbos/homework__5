@@ -61,10 +61,10 @@ class App extends Component {
 
     if (editIndex !== null) {
       contacts[editIndex] = newContact;
-      toast.success('Contact updated successfully!');
+      toast.success('Kontakt muvaffaqiyatli yangilandi!');
     } else {
       contacts.push(newContact);
-      toast.success('Contact added successfully!');
+      toast.success('Kontakt muvaffaqiyatli qo‘shildi!');
     }
 
     this.setState({ contacts, showModal: false });
@@ -73,7 +73,7 @@ class App extends Component {
   handleDelete = (index) => {
     const contacts = this.state.contacts.filter((_, i) => i !== index);
     this.setState({ contacts });
-    toast.error('Contact deleted successfully!');
+    toast.error('Kontakt muvaffaqiyatli oʻchirildi!');
   };
 
   filterContacts = () => {
